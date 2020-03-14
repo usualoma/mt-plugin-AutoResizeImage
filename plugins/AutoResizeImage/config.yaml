@@ -1,0 +1,24 @@
+id: AutoResizeImage
+name: AutoResizeImage
+version: 0.0.1
+
+description: <__trans phrase="This plugin enables you to optimize and resize images.">
+author_name: Taku Amano
+author_link: http://blog.taaas.jp/
+plugin_link: http://blog.taaas.jp/mt/mt-plugin-AutoResizeImage/
+
+l10n_lexicon:
+  ja:
+    This plugin enables you to optimize and resize images.: "画像のアップロード時に画像の最適化とリサイズを自動で実行できるようにします。"
+    Quality: "クオリティ"
+
+settings:
+  autoresizeimage_size:
+    Default: 1920
+  autoresizeimage_quality:
+    Default: 90
+
+config_template: autoresizeimage_blog_config.tmpl
+
+callbacks:
+  MT::App::CMS::template_param.async_asset_upload: $AutoResizeImage::MT::Plugin::AutoResizeImage::template_param_async_asset_upload

@@ -1,0 +1,13 @@
+#mt-plugin-autoresizeimage-modal .modal-dialog {
+  max-width: 100%;
+}
+
+#mt-plugin-autoresizeimage-modal .modal-body {
+  max-height: calc(100vh - 62px - 49px - 2rem - 2rem);
+  height: calc(100vh - 62px - 49px - 2rem - 2rem);
+}
+
+#mt-plugin-autoresizeimage-modal iframe {
+  width: 100%;
+  height: 100%;
+}
